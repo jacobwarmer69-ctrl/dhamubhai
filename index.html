@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <title>VIP PREDICTION - Official Channel</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=Noto+Sans+Devanagari:wght@500;700&display=swap" rel="stylesheet">
+
+    <!-- ==========================================
+         META FACEBOOK PIXEL CODE
+         ========================================== -->
+    <script>
+      !function(f,b,e,v,n,t,s)
+      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+      n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s)}(window, document,'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', '4717575388522622');
+      fbq('track', 'PageView');
+    </script>
+    <noscript>
+      <img height="1" width="1" style="display:none" 
+           src="https://www.facebook.com/tr?id=4717575388522622&ev=PageView&noscript=1" 
+           alt="fb-pixel" />
+    </noscript>
+    <!-- End Meta Pixel Code -->
+
+    <style>
+        :root {
+            --bg-dark: #0a0102;
+            --bg-deep-red: #350106;
+            --glow-red: rgba(230, 20, 35, 0.45);
+            --gold-primary: #f5b335;
+            --gold-secondary: #ffdf79;
+            --btn-red: #ff1125;
+            --btn-hover: #e00b1e;
+            --text-white: #ffffff;
+            --text-gold: #e2ad54;
+            --text-muted: #ffb8b8;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-white);
+            font-family: 'Montserrat', sans-serif;
+            min-height: 100vh;
+            min-height: 100dvh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        /* Ambient Dynamic Background & Subtle Pattern */
+        .page-wrapper {
+            width: 100%;
+            min-height: 100vh;
+            min-height: 100dvh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 32px 20px;
+            background: 
+                radial-gradient(circle at 50% 25%, rgba(185, 9, 23, 0.65) 0%, rgba(77, 4, 10, 0.4) 40%, rgba(10, 1, 2, 0.98) 85%),
+                radial-gradient(circle at 50% 80%, rgba(90, 6, 14, 0.3) 0%, transparent 60%),
+                #0a0102;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Background Pattern Vignette & Overlay */
+        .page-wrapper::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                radial-gradient(rgba(245, 179, 53, 0.08) 1px, transparent 1px),
+                radial-gradient(rgba(255, 17, 37, 0.06) 1px, transparent 1px);
+            background-size: 32px 32px, 20px 20px;
+            background-position: 0 0, 16px 16px;
+            pointer-events: none;
+            opacity: 0.6;
+            z-index: -1;
+        }
+
+        /* Ambient Center Glow */
+        .glow-sphere {
+            position: absolute;
+            width: 340px;
+            height: 340px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(255, 17, 37, 0.35) 0%, rgba(200, 10, 25, 0.1) 50%, transparent 70%);
+            top: 35%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            filter: blur(28px);
+            pointer-events: none;
+            z-index: 0;
+            animation: pulseGlow 4s ease-in-out infinite alternate;
+        }
+
+        @keyframes pulseGlow {
+            0% { transform: translate(-50%, -50%) scale(0.95); opacity: 0.7; }
+            100% { transform: translate(-50%, -50%) scale(1.15); opacity: 1; }
+        }
+
+        /* Main Container */
+        .container {
+            width: 100%;
+            max-width: 440px;
+            margin: auto;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            z-index: 2;
+            animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(22px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* 1. Official Channel Label */
+        .official-tag {
+            font-size: 11px;
+            font-weight: 700;
+            color: var(--text-gold);
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            margin-bottom: 24px;
+            text-shadow: 0 0 10px rgba(245, 179, 53, 0.35);
+        }
+
+        /* 2. Circular Profile / Logo with Double Gold Border */
+        .avatar-container {
+            position: relative;
+            width: 172px;
+            height: 172px;
+            border-radius: 50%;
+            padding: 5px;
+            margin-bottom: 24px;
+            background: linear-gradient(145deg, #ffd978, #a87922, #f5b335, #ffeaa7);
+            box-shadow: 
+                0 0 25px rgba(245, 179, 53, 0.4),
+                0 0 50px rgba(255, 17, 37, 0.35);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.4s ease;
+        }
+
+        .avatar-container:hover {
+            transform: scale(1.03);
+        }
+
+        .avatar-inner-ring {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            padding: 3px;
+            background: #000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .avatar-img-box {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            overflow: hidden;
+            background: radial-gradient(circle, #e21c2c 0%, #7d020a 100%);
+            border: 2px solid rgba(255, 217, 120, 0.6);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .avatar-img-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        /* 3. Heading */
+        .brand-title {
+            font-size: 38px;
+            font-weight: 900;
+            color: #ffffff;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 14px;
+            text-shadow: 
+                0 0 12px rgba(255, 255, 255, 0.4),
+                0 0 24px rgba(255, 17, 37, 0.7);
+            line-height: 1.15;
+        }
+
+        /* 4. Promotional Message */
+        .promo-desc {
+            font-family: 'Noto Sans Devanagari', 'Montserrat', sans-serif;
+            font-size: 15px;
+            line-height: 1.6;
+            font-weight: 600;
+            color: #e5cfcf;
+            margin-bottom: 24px;
+            padding: 0 12px;
+            text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
+        }
+
+        /* 2-Second Timer Notification Strip */
+        .timer-badge-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            margin-bottom: 14px;
+            font-size: 13px;
+            font-weight: 700;
+            color: var(--gold-secondary);
+            background: rgba(255, 255, 255, 0.06);
+            border: 1px solid rgba(245, 179, 53, 0.28);
+            border-radius: 9999px;
+            padding: 6px 18px;
+            box-shadow: 0 0 15px rgba(245, 179, 53, 0.15);
+        }
+
+        .timer-badge-container .live-dot {
+            width: 8px;
+            height: 8px;
+            background-color: #22c55e;
+            border-radius: 50%;
+            box-shadow: 0 0 8px #22c55e;
+            animation: blink 1s ease-in-out infinite alternate;
+        }
+
+        @keyframes blink {
+            from { opacity: 0.3; transform: scale(0.85); }
+            to { opacity: 1; transform: scale(1.15); }
+        }
+
+        /* 5. Glowing Red CTA Button */
+        .cta-btn {
+            position: relative;
+            overflow: hidden;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            width: 100%;
+            max-width: 320px;
+            padding: 16px 28px;
+            border-radius: 9999px;
+            background: linear-gradient(180deg, #ff2a3b 0%, #db0a1c 100%);
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: 800;
+            letter-spacing: 0.5px;
+            box-shadow: 
+                0 8px 24px rgba(255, 17, 37, 0.6),
+                0 0 18px rgba(255, 17, 37, 0.4),
+                inset 0 1px 1px rgba(255, 255, 255, 0.45);
+            transition: all 0.25s ease-in-out;
+            cursor: pointer;
+            border: none;
+            outline: none;
+            margin-bottom: 24px;
+        }
+
+        /* Progress fill bar inside the button during the 2s countdown */
+        .cta-btn .countdown-progress {
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 0%;
+            background: rgba(255, 255, 255, 0.22);
+            transition: width 2s linear;
+            pointer-events: none;
+        }
+
+        .cta-btn svg {
+            width: 21px;
+            height: 21px;
+            fill: currentColor;
+            transform: rotate(-15deg);
+            transition: transform 0.25s ease;
+            position: relative;
+            z-index: 2;
+        }
+
+        .cta-btn span {
+            position: relative;
+            z-index: 2;
+        }
+
+        .cta-btn:hover {
+            background: linear-gradient(180deg, #ff3848 0%, #ed0b1f 100%);
+            transform: translateY(-2px) scale(1.02);
+            box-shadow: 
+                0 12px 30px rgba(255, 17, 37, 0.75),
+                0 0 25px rgba(255, 17, 37, 0.6);
+        }
+
+        .cta-btn:hover svg {
+            transform: rotate(0deg) scale(1.1);
+        }
+
+        .cta-btn:active {
+            transform: translateY(1px) scale(0.98);
+            box-shadow: 0 4px 14px rgba(255, 17, 37, 0.5);
+        }
+
+        /* 6. Footer Badges & Copyright */
+        .footer-badge {
+            font-size: 11px;
+            font-weight: 700;
+            color: var(--text-gold);
+            letter-spacing: 3.5px;
+            text-transform: uppercase;
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .footer-badge .bullet {
+            color: #ff3344;
+            font-size: 13px;
+        }
+
+        .copyright {
+            font-size: 11px;
+            font-weight: 500;
+            color: rgba(255, 255, 255, 0.42);
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        @media (max-width: 360px) {
+            .brand-title {
+                font-size: 32px;
+            }
+            .avatar-container {
+                width: 148px;
+                height: 148px;
+            }
+            .promo-desc {
+                font-size: 14px;
+            }
+            .cta-btn {
+                font-size: 16px;
+                padding: 14px 22px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="glow-sphere"></div>
+
+    <main class="page-wrapper">
+        <div class="container">
+            
+            <!-- 1. Small uppercase top label -->
+            <p class="official-tag">OFFICIAL CHANNEL</p>
+
+            <!-- 2. Circular profile image with double gold border -->
+            <div class="avatar-container">
+                <div class="avatar-inner-ring">
+                    <div class="avatar-img-box">
+                        <img id="channelLogo" 
+                             src="vip-image.png" 
+                             alt="VIP PREDICTION Logo">
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3. Main Brand Heading -->
+            <h1 class="brand-title">DHAMU BHAI</h1>
+
+            <!-- 4. Promotional Message -->
+            <p class="promo-desc">
+                👉 अपने दोस्तों को 9kclub पर आमंत्रित करें और आसानी से ₹500 का फ्री बोनस अनलॉक करें! 🎁
+            </p>
+
+            <!-- 2-Second Timer Notification Pill -->
+            <div class="timer-badge-container" id="timerInfo" aria-live="polite">
+                <span class="live-dot"></span>
+                <span>Redirecting in... <strong id="timerDisplay">2s</strong></span>
+            </div>
+
+            <!-- 5. Glowing Red CTA Button -->
+            <button class="cta-btn" id="joinTelegramBtn" type="button" aria-label="Join VIP Telegram Channel">
+                <div class="countdown-progress" id="countdownProgress"></div>
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.75-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/>
+                </svg>
+                <span id="ctaText">Redirecting (2s)...</span>
+            </button>
+
+            <!-- 6. Footer Content -->
+            <div class="footer-badge">
+                <span>FREE</span>
+                <span class="bullet">•</span>
+                <span>LIMITED SLOTS</span>
+            </div>
+
+            <p class="copyright">© 2026 VIP PREDICTION</p>
+
+        </div>
+    </main>
+
+    <!-- ==========================================
+         JAVASCRIPT REDIRECT LOGIC
+         ========================================== -->
+    <script>
+        (function() {
+            const TELEGRAM_URL = 'https://t.me/+5btCIu05DrFkZGRl';
+            const ctaBtn = document.getElementById('joinTelegramBtn');
+            const ctaText = document.getElementById('ctaText');
+            const timerDisplay = document.getElementById('timerDisplay');
+            const timerInfo = document.getElementById('timerInfo');
+            const countdownProgress = document.getElementById('countdownProgress');
+
+            let isRedirected = false;
+            let secondsLeft = 2;
+
+            // Animate progress bar fill over 2 seconds
+            requestAnimationFrame(() => {
+                if (countdownProgress) {
+                    countdownProgress.style.width = '100%';
+                }
+            });
+
+            /**
+             * Fires Pixel Lead event and redirects immediately to the link
+             */
+            function performRedirect() {
+                if (isRedirected) return;
+                isRedirected = true;
+
+                // Track Meta Pixel Lead event
+                if (typeof fbq === 'function') {
+                    try {
+                        fbq('track', 'Lead', {
+                            content_name: 'VIP Telegram Join Auto',
+                            currency: 'INR',
+                            value: 500.00
+                        });
+                    } catch (err) {
+                        console.error('Meta Pixel Lead tracking error:', err);
+                    }
+                }
+
+                if (ctaText) ctaText.textContent = 'Opening Telegram...';
+                if (timerInfo) {
+                    timerInfo.innerHTML = '<span class="live-dot" style="background-color: #22c55e;"></span><span>Opening Channel...</span>';
+                }
+
+                // Redirect user directly
+                window.location.href = TELEGRAM_URL;
+            }
+
+            // 2-Second countdown interval that triggers direct redirect
+            const countdownInterval = setInterval(() => {
+                secondsLeft--;
+                if (secondsLeft > 0) {
+                    if (ctaText) ctaText.textContent = `Redirecting (${secondsLeft}s)...`;
+                    if (timerDisplay) timerDisplay.textContent = `${secondsLeft}s`;
+                } else {
+                    clearInterval(countdownInterval);
+                    performRedirect();
+                }
+            }, 1000);
+
+            // Manual click fallback (redirects immediately if clicked before 2 seconds)
+            if (ctaBtn) {
+                ctaBtn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    clearInterval(countdownInterval);
+                    performRedirect();
+                });
+            }
+        })();
+    </script>
+</body>
+</html>
